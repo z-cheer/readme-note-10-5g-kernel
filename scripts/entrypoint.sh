@@ -21,7 +21,7 @@ pushd camellia-r-oss
     # export CROSS_COMPILE=${PWD}/toolchain/bin/aarch64-linux-android-
 
     wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/android-13.0.0_r0.130/clang-r416183b.tar.gz
-    tar vxzf linux-x86-android-13.0.0_r0.130-clang-r416183b.tar.gz
+    tar vxzf clang-r416183b.tar.gz
 
     make O=out camellia_gl_defconfig
     make -j$(nproc --all) O=out 2>&1 | tee kernel.log
