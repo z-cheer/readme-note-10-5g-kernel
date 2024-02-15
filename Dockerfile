@@ -27,7 +27,7 @@ USER root
 RUN pacman-key --init && \
     pacman -Syu --noconfirm 
 
-RUN pacman -S git ccache lzop python-networkx squashfs-tools \
+RUN pacman -S wget git ccache lzop python-networkx squashfs-tools \
 pngcrush schedtool optipng maven pwgen minicom bc zip unzip --noconfirm 
 
 RUN mkdir -p /opt/app/ && \
