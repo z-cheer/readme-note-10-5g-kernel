@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  camellia-r-oss:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        TAG: multilib-devel #multilib-devel-20240201.0.210909
+    image: camellia-r-oss:0.0.1
+    container_name: camellia-r-oss
+    hostname: camellia-r-oss
+    environment:
+      GIT_NAME: zero
+    # ports:
+    #   - 80:80
+    volumes:
+      - ./dist/:/opt/app/dist/
+    # healthcheck:
+    #   test: ["CMD-SHELL", "gcc -v"]
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 5
+
