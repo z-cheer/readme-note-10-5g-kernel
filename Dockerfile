@@ -27,9 +27,8 @@ USER root
 RUN pacman-key --init && \
     pacman -Syu --noconfirm 
 
-RUN pacman -S git ccache automake flex lzop bison \
-zip curl python-networkx bzip2 squashfs-tools pngcrush \
-schedtool make optipng maven pwgen minicom bc unzip --noconfirm 
+RUN pacman -S git ccache lzop python-networkx squashfs-tools \
+pngcrush schedtool optipng maven pwgen minicom bc zip unzip --noconfirm 
 
 RUN mkdir -p /opt/app/ && \
     mkdir -p /opt/app/dist/
