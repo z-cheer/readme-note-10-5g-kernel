@@ -29,7 +29,7 @@ RUN pacman-key --init && \
 
 RUN pacman -S wget git ccache lzop python-networkx squashfs-tools \
 pngcrush schedtool optipng maven pwgen minicom bc zip unzip \
-android-tool --noconfirm 
+android-tools --noconfirm 
 
 RUN mkdir -p /opt/app/ && \
     mkdir -p /opt/app/dist/
